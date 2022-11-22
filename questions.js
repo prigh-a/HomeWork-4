@@ -1,58 +1,103 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="./style.css">
-
-  <title>Quiz Game</title>
-</head>
-
-<body>
-  <header>
-    <nav class="navbar">
-      <button class="btn btn-outline-primary" onclick="location.reload()">Home</button>
-      <button class="btn btn-outline-secondary my-2 my-sm-0 scores_nav">HighScores</button>
-      <button class="btn btn-outline-warning timer-btn"><span>Timer:</span> <span class="time"></span></button>
-    </nav>
-  </header>
-  <main>
-    
-    <div class="quiz_cards">
-      <div class="container mt-5">
-        <div class="card intro">
-          <div class="card-body">
-            <h4 class="card-title">Quiz Game</h4>
-            <p class="card-text">Practice JavaScript data types, built-in methods, and variables.</p>
-            <button class="start_game btn btn-outline-success">Start Game</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="container quiz mt-5">
-    </div>
-    <!-- <p class="btn btn-outline-warning my-2 my-sm-0 scores">End Quiz</p> -->
-    <div class="container score_card mt-5"></div>
-    <div class="container score_table mt-5"></div>
-  </main>
-  
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script> -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/7053e21479.js" crossorigin="anonymous"></script>
-  <script src="./questions.js"></script>
-  <script src="./script.js"></script>
-</body>
-
-</html>
+const questions = [
+  {
+    title: 'Which is alphabet?',
+    code: '',
+    choices: ['a', '1', '!', ','],
+    answer: 'a'
+  },
+  {
+    title: 'Which is number ?',
+    code: '',
+    choices: [
+      1,'a','b','c'
+    ],
+    answer: 1
+  },
+  {
+    title: 'What are variables used for in JavaScript?',
+    code: '',
+    choices: [
+      'For changing language settings',
+      'For storing or holding data',
+      'For changing a value\'s data type'
+    ],
+    answer: 'For storing or holding data'
+  },
+  {
+    title: 'What is the correct way to call a string’s built-in method?',
+    code: '',
+    choices: [
+      "toUpperCase('str')",
+      "'str'.toUpperCase()",
+      "toUpperCase.'str'()",
+      "'str'.toUpperCase"
+    ],
+    answer: "'str'.toUpperCase()"
+  },
+  {
+    title: "What is string interpolation?",
+    code: "",
+    choices: [
+      "Printing a string to the console",
+      "Using template literals to embed variables into strings",
+      "Joining multiple strings together using operators like +",
+      "Changing the value of a variable"
+    ],
+    answer: "Using template literals to embed variables into strings"
+  },
+  {
+    title: "What is the outcome of this statement?",
+    code: "console.log('hi!'.length);",
+    choices: [
+      "hi! is printed to the console",
+      "3 is printed to the console",
+      "'hi!'.length will be printed to the console",
+      "1 is printed to the console"
+    ],
+    answer: "3 is printed to the console"
+  },
+  {
+    title: "What is string concatenation?",
+    code: "",
+    choices: [
+      "When you print string to the console",
+      "When you join strings together",
+      "When you assign a string to a variable",
+      "When you change a variable's value"
+    ],
+    answer: "When you join strings together"
+  },
+  {
+    title: "Which of the following is an example of a single line comment?",
+    code: "",
+    choices: [
+      "// Is this a comment?",
+      "console.log()",
+      "console.log('Is this a comment?');",
+      "'Is this a comment?"
+    ],
+    answer: "// Is this a comment?"
+  },
+  {
+    title: "What will the following code print to the console?",
+    code: "let num = 10;\nnum *= 3;\nconsole.log(num);",
+    choices: [
+      "3",
+      "30",
+      "'num'",
+      "10"
+    ],
+    answer: "30"
+  },
+  {
+    title: "What is the correct way to declare a new variable that you can change?",
+    code: "",
+    choices: [
+      "let myName = 'Sloan'",
+      "myName = 'Sloan'",
+      "let myName: 'Sloan'",
+      "const myName = 'Sloan'"
+    ],
+    answer: "let myName = 'Sloan'"
+  }
+]
